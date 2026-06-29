@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
+  --color-sleek-bg: #0A0C10;
+  --color-sleek-panel: #0D1117;
+  --color-sleek-card: #161B22;
+  --color-sleek-border: #1E293B;
+  --color-neon-cyan: #06B6D4;
+  --color-neon-magenta: #EC4899;
+}
+
+/* Base Body Styles */
+@layer base {
+  body {
+    background-color: var(--color-sleek-bg);
+    color: #E2E8F0;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    position: relative;
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-sleek-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-cyan);
+}
+
+/* Glass and subtle gradients */
+.sleek-panel {
+  background-color: var(--color-sleek-panel);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.sleek-card {
+  background-color: var(--color-sleek-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #4F46E5 0%, #2563EB 50%, #06B6D4 100%);
+  box-shadow: 0 10px 40px rgba(37, 99, 235, 0.25);
+}
+
+.gradient-sidebar {
+  background: linear-gradient(180deg, #1E293B 0%, transparent 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #06B6D4, #3B82F6, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
